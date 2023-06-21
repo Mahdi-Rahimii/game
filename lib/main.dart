@@ -4,6 +4,9 @@ void main() {
   runApp(
     MaterialApp(
       home: const MyApp(),
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+      ),
     ),
   );
 }
