@@ -51,11 +51,14 @@ class _MyAppState extends State<MyApp> {
                   padding: const EdgeInsets.all(10.0),
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: const Icon(
-                      Icons.add_rounded,
-                      size: 40,
-                      color: Colors.white,
-                      weight: 40,
+                    child: Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: const Icon(
+                        Icons.add_rounded,
+                        size: 40,
+                        color: Colors.white,
+                        weight: 40,
+                      ),
                     ),
                   ),
                 ),
@@ -69,7 +72,10 @@ class _MyAppState extends State<MyApp> {
                 padding: const EdgeInsets.all(30.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    icon: Icon(Icons.search),
+                    prefixIcon: Icon(
+                      Icons.search,
+                      color: Colors.black,
+                    ),
                     hintText: "Search",
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(50)),
@@ -78,66 +84,503 @@ class _MyAppState extends State<MyApp> {
               )),
             ],
           ),
-          Container(
-            height: 450,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Stack(
-                children: [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    width: 500,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      gradient: LinearGradient(
-                        colors: [Colors.red, Colors.amber],
-                      ),
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                Stack(
+                  children: [
+                    SizedBox(
+                      height: 10,
                     ),
-                    margin: EdgeInsets.all(10),
-                  ),
-                  Positioned(
-                    top: 10,
-                    left: 10,
-                    child: Container(
-                      width: 60,
+                    Container(
+                      width: 500,
                       height: 60,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: Colors.black,
+                        gradient: LinearGradient(
+                          colors: [Colors.red, Color(0xFF75FA08)],
+                        ),
+                      ),
+                      margin: EdgeInsets.all(10),
+                    ),
+                    Positioned(
+                      top: 10,
+                      left: 10,
+                      child: Stack(
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.black,
+                            ),
+                            child: Center(
+                              child: Text(
+                                "1",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 34),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ),
-                  Positioned(
-                    top: 25,
-                    left: 300,
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      width: 30,
-                      height: 30,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "10:00",
+                            style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          SizedBox(
+                            width: 100,
+                          ),
+                          Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.red,
+                            ),
+                            child: Icon(Icons.delete),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white,
+                            ),
+                            child: Center(child: Icon(Icons.restart_alt)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Stack(
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 500,
+                      height: 60,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: Colors.white,
+                        gradient: LinearGradient(
+                          colors: [Colors.red, Color(0xFF75FA08)],
+                        ),
+                      ),
+                      margin: EdgeInsets.all(10),
+                    ),
+                    Positioned(
+                      top: 10,
+                      left: 10,
+                      child: Stack(
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.black,
+                            ),
+                            child: Center(
+                              child: Text(
+                                "2",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 34),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ),
-                  Positioned(
-                    top: 25,
-                    left: 400,
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      width: 30,
-                      height: 30,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "07:00",
+                            style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          SizedBox(
+                            width: 100,
+                          ),
+                          Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.red,
+                            ),
+                            child: Icon(Icons.delete),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white,
+                            ),
+                            child: Center(child: Icon(Icons.restart_alt)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Stack(
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 500,
+                      height: 60,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: Colors.white,
+                        gradient: LinearGradient(
+                          colors: [Colors.red, Color(0xFF75FA08)],
+                        ),
+                      ),
+                      margin: EdgeInsets.all(10),
+                    ),
+                    Positioned(
+                      top: 10,
+                      left: 10,
+                      child: Stack(
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.black,
+                            ),
+                            child: Center(
+                              child: Text(
+                                "3",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 34),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ),
-                ],
-              ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "06:00",
+                            style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          SizedBox(
+                            width: 100,
+                          ),
+                          Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.red,
+                            ),
+                            child: Icon(Icons.delete),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white,
+                            ),
+                            child: Center(child: Icon(Icons.restart_alt)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Stack(
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 500,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        gradient: LinearGradient(
+                          colors: [Colors.red, Color(0xFF75FA08)],
+                        ),
+                      ),
+                      margin: EdgeInsets.all(10),
+                    ),
+                    Positioned(
+                      top: 10,
+                      left: 10,
+                      child: Stack(
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.black,
+                            ),
+                            child: Center(
+                              child: Text(
+                                "4",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 34),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "04:09",
+                            style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          SizedBox(
+                            width: 100,
+                          ),
+                          Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.red,
+                            ),
+                            child: Icon(Icons.delete),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white,
+                            ),
+                            child: Center(child: Icon(Icons.restart_alt)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Stack(
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 500,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        gradient: LinearGradient(
+                          colors: [Colors.red, Color(0xFF75FA08)],
+                        ),
+                      ),
+                      margin: EdgeInsets.all(10),
+                    ),
+                    Positioned(
+                      top: 10,
+                      left: 10,
+                      child: Stack(
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.black,
+                            ),
+                            child: Center(
+                              child: Text(
+                                "5",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 34),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "05:90",
+                            style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          SizedBox(
+                            width: 100,
+                          ),
+                          Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.red,
+                            ),
+                            child: Icon(Icons.delete),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white,
+                            ),
+                            child: Center(child: Icon(Icons.restart_alt)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Stack(
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 500,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        gradient: LinearGradient(
+                          colors: [Colors.red, Color(0xFF75FA08)],
+                        ),
+                      ),
+                      margin: EdgeInsets.all(10),
+                    ),
+                    Positioned(
+                      top: 10,
+                      left: 10,
+                      child: Stack(
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.black,
+                            ),
+                            child: Center(
+                              child: Text(
+                                "6",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 34),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "00:00",
+                            style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          SizedBox(
+                            width: 100,
+                          ),
+                          Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.red,
+                            ),
+                            child: Icon(Icons.delete),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white,
+                            ),
+                            child: Center(child: Icon(Icons.restart_alt)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ],
